@@ -13,7 +13,7 @@ import redisStore from 'cache-manager-redis-store';
       envFilePath: '.env',
     }),
     TypegooseModule.forRoot(
-      'mongodb://localhost:27017/{{ cookiecutter.project-slug }}',
+      'mongodb://localhost:27017/{{ cookiecutter.project_slug }}',
     ),
     GraphQLModule.forRoot({
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
