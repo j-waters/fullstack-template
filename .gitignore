@@ -1,0 +1,2 @@
+{{ cookiecutter.project_slug }}/.idea/vcs.xml
+{{ cookiecutter.project_slug }}/.idea/inspectionProfiles/
