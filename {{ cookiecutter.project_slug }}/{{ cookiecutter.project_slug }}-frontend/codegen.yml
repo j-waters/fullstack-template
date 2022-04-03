@@ -1,5 +1,5 @@
 overwrite: true
-schema: "../{{ cookiecutter.pkg_name }}_backend/src/schema.gql"
+schema: "../{{ cookiecutter.project_slug }}-backend/src/schema.gql"
 documents:
   - 'src/**/*.ts'
   - 'src/**/*.vue'

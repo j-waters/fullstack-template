@@ -5,6 +5,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { ConfigModule } from '@nestjs/config';
+import { AppResolver } from './app.resolver';
 import redisStore from 'cache-manager-redis-store';
 
 @Module({
@@ -32,6 +33,6 @@ import redisStore from 'cache-manager-redis-store';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppResolver],
 })
 export class AppModule {}
