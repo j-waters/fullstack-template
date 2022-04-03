@@ -1,0 +1,4 @@
+{
+	"private": true,
+	"workspaces": ["{{ cookiecutter.pkg_name }}_backend", "{{ cookiecutter.pkg_name }}_frontend"]
+}

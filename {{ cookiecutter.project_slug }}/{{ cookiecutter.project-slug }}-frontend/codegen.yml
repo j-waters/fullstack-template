@@ -1,0 +1,23 @@
+overwrite: true
+schema: "../{{ cookiecutter.pkg_name }}_backend/src/schema.gql"
+documents:
+  - 'src/**/*.ts'
+  - 'src/**/*.vue'
+  - '!src/generated/gql/**/*'
+  - 'src/fragments.graphql'
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-request"
+    config:
+      vueCompositionApiImportFrom: vue
+      scalars:
+        DateTime: string
+        ObjectId: string
+      inlineFragmentTypes: combine
+  ./src/generated/gql/:
+    preset: gql-tag-operations-preset
+
+
